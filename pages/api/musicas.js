@@ -1,6 +1,6 @@
 export default async function (request, response) {
 
-    const base_url = process.env.VERCEL_URL;
+    const base_url = `https://${process.env.VERCEL_URL}/`;
     response.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate');
     response.json({
         "episodes": [
